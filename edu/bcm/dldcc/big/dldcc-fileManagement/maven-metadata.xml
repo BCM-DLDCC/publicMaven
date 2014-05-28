@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>edu.bcm.dldcc.big</groupId>
-  <artifactId>dldcc-cas</artifactId>
+  <artifactId>dldcc-fileManagement</artifactId>
   <versioning>
     <versions>
-      <version>1.3.1-SNAPSHOT</version>
+      <version>1.0.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20140528200333</lastUpdated>
+    <lastUpdated>20140528200348</lastUpdated>
   </versioning>
 </metadata>
