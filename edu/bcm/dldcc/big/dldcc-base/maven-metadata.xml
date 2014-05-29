@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>edu.bcm.dldcc.big</groupId>
+  <artifactId>dldcc-base</artifactId>
+  <versioning>
+    <versions>
+      <version>2.1.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20140529143837</lastUpdated>
+  </versioning>
+</metadata>
