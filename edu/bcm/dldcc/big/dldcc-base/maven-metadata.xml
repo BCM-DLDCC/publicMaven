@@ -3,9 +3,10 @@
   <groupId>edu.bcm.dldcc.big</groupId>
   <artifactId>dldcc-base</artifactId>
   <versioning>
+    <release>2.1.1.Final</release>
     <versions>
-      <version>2.1.1-SNAPSHOT</version>
+      <version>2.1.1.Final</version>
     </versions>
-    <lastUpdated>20140529143837</lastUpdated>
+    <lastUpdated>20140529152546</lastUpdated>
   </versioning>
 </metadata>
