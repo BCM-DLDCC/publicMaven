@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>dldcc-common</artifactId>
+	<name>DLDCC Bioinformatics Grid Common Utilities</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- Define the version of JBoss' Java EE 6 APIs we want to import. Any 
+			dependencies from org.jboss.spec will have their version defined by this 
+			BOM -->
+		<javaee6.web.spec.version>2.0.0.Final</javaee6.web.spec.version>
+		<!-- Alternatively, comment out the above line, and un-comment the line 
+			below to use version 3.0.0.Beta1-redhat-1 which is a release certified to 
+			work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 maven 
+			repository. -->
+		<!-- <javaee6.web.spec.version>3.0.0.Beta1-redhat-1</javaee6.web.spec.version> -->
+		<seam.version>3.1.0.Final</seam.version>
+	</properties>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Maven Repository Group</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.solder</groupId>
+			<artifactId>solder-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.seam.security</groupId>
+			<artifactId>seam-security-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.seam.security</groupId>
+			<artifactId>seam-security</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.picketlink.idm</groupId>
+			<artifactId>picketlink-idm-ldap</artifactId>
+			<version>1.5.0.Alpha02</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.spec.javax.servlet</groupId>
+			<artifactId>jboss-servlet-api_3.0_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.solder</groupId>
+			<artifactId>solder-impl</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.6</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
+			<version>4.2.2.Final</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>edu.bcm.dldcc.big</groupId>
+			<artifactId>dldcc-iso21090</artifactId>
+			<version>1.1.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.spec.javax.ejb</groupId>
+			<artifactId>jboss-ejb-api_3.1_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-jpamodelgen</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.spec.javax.faces</groupId>
+			<artifactId>jboss-jsf-api_2.0_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.jboss.seam</groupId>
+				<artifactId>seam-bom</artifactId>
+				<version>3.1.0.Final</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+
+	<version>1.5.1-SNAPSHOT</version>
+	<description>Common utilities for the DLDCC Bioinformatics Grid projects based on EE6.</description>
+	<scm>
+		<url>svn://svn.dldcc.bcm.edu/svn/repo/common/trunk/common</url>
+		<tag>HEAD</tag>
+		<developerConnection>scm:svn:svn://svn.dldcc.bcm.edu:3690/common-repo</developerConnection>
+	</scm>
+	<parent>
+		<groupId>edu.bcm.dldcc.big</groupId>
+		<artifactId>dldcc-base</artifactId>
+		<version>2.1.1-SNAPSHOT</version>
+	</parent>
+</project>
